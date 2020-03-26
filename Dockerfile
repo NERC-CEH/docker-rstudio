@@ -22,6 +22,7 @@ RUN apt-get update -y \
   libssl-dev \
   libssh2-1-dev \
   libsodium-dev \
+  libv8-dev \
   && apt-get clean
 
 # Install Base Packages
