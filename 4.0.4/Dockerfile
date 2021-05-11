@@ -23,6 +23,7 @@ RUN apt-get update -y \
   libssh2-1-dev \
   libsodium-dev \
   libv8-dev \
+  libxt6 \
   python3-dev \
   && apt-get clean
 
