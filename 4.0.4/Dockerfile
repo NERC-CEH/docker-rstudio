@@ -25,8 +25,16 @@ RUN apt-get update -y \
   libv8-dev \
   libxt6 \
   python3-dev \
+  texlive-latex-base \
+  libglpk-dev \
   && apt-get clean
 
 # Install Base Packages
 RUN R -e "install.packages(c('devtools','dplyr', 'knitr', 'magrittr', 'packrat', 'renv' ), repos='http://cran.rstudio.com/')"
+
+# Set timeout behavior
+RUN echo 'auth-timeout-minutes=0' >> /etc/rstudio/rserver.conf
+
+# Touch Assets Folder
+RUN mkdir /assets
 

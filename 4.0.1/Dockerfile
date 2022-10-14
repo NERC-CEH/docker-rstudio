@@ -29,3 +29,5 @@ RUN apt-get update -y \
 # Install Base Packages
 RUN R -e "install.packages(c('devtools','dplyr', 'knitr', 'magrittr', 'packrat', 'renv' ), repos='http://cran.rstudio.com/')"
 
+# Touch Asset Folder
+RUN mkdir /assets
